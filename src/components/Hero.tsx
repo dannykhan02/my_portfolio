@@ -24,8 +24,8 @@ const Hero = () => {
             >
               <p className="text-burntorange mb-2">Hello, I'm</p>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
-                <span className="block typing-effect mb-2">Full Stack Developer</span>
-                <span className="text-burntorange">Results-Driven</span> Freelancer
+                <span className="block typing-effect mb-2">Daniel Kemboi</span>
+                <span className="text-burntorange">Full Stack Developer</span>
               </h1>
               <p className="text-zinc-400 text-lg mb-4">Turning ideas into scalable digital solutions.</p>
             </motion.div>
@@ -36,7 +36,7 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-zinc-400 text-lg max-w-2xl"
             >
-              I build high-performance applications with JavaScript (ES6+), TypeScript, Python, PHP,
+              I am a results-driven freelancer with expertise in JavaScript (ES6+), TypeScript, Python, PHP,
               and frameworks like React, Flask, and Express.js.
             </motion.p>
 
@@ -71,10 +71,14 @@ const Hero = () => {
                 View My Work
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button size="lg" variant="outline" className="group">
+              <a
+                href="/daniel_kemboi_cv.docx"
+                download="Daniel_Kemboi_CV.docx"
+                className="group inline-flex items-center px-6 py-3 border rounded-md text-sm font-medium text-white border-burntorange hover:bg-burntorange hover:text-white transition"
+              >
                 Download CV
                 <Download className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-1" />
-              </Button>
+              </a>
             </motion.div>
 
             <motion.div
@@ -129,7 +133,7 @@ const Hero = () => {
               <div className="relative bg-charcoal rounded-full h-64 w-64 md:h-80 md:w-80 overflow-hidden border-4 border-deepgray shadow-xl">
                 <div className="h-full w-full flex items-center justify-center">
                   <img
-                    src="/profile-picture.png" 
+                    src="/profile-picture.png"
                     alt="Daniel Kemboi"
                     className="object-cover h-full w-full rounded-full"
                   />
