@@ -188,10 +188,10 @@ const Hero = () => {
   return (
     <section 
       id="hero" 
-      className="min-h-screen flex items-center pt-20 pb-10 bg-gradient-to-br from-gray-950 via-slate-900 to-black relative overflow-hidden"
+      className="min-h-screen flex items-center pt-20 pb-10 bg-gradient-to-br from-slate-950 via-gray-900 to-black relative overflow-hidden"
     >
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500/8 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-orange-500/10 via-transparent to-transparent"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -203,7 +203,7 @@ const Hero = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <motion.p 
-                className="text-blue-400 mb-3 text-lg font-medium tracking-wide"
+                className="text-orange-400 mb-3 text-lg font-medium tracking-wide"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
@@ -222,7 +222,7 @@ const Hero = () => {
                 </motion.span>
                 
                 <motion.span 
-                  className="block text-3xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent leading-tight"
+                  className="block text-3xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-orange-400 via-orange-500 to-red-500 bg-clip-text text-transparent leading-tight"
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.5 }}
@@ -266,9 +266,9 @@ const Hero = () => {
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.9 + index * 0.1 }}
-                        className="group bg-gradient-to-r from-slate-800/50 to-gray-800/50 hover:from-blue-600/20 hover:to-cyan-600/20 border border-slate-600 hover:border-blue-400/50 text-slate-300 hover:text-blue-300 px-4 py-2 rounded-lg text-sm font-medium flex items-center transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/10"
+                        className="group bg-gradient-to-r from-orange-500/20 to-red-500/20 hover:from-orange-500/30 hover:to-red-500/30 border border-orange-500/30 text-orange-300 px-4 py-2 rounded-full text-sm font-medium flex items-center transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25"
                       >
-                        <IconComponent className="mr-2 h-4 w-4 group-hover:text-blue-300 transition-colors" />
+                        <IconComponent className="mr-2 h-4 w-4 group-hover:text-orange-200 transition-colors" />
                         {tech.name}
                       </motion.span>
                     );
@@ -287,7 +287,7 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 onClick={scrollToProjects}
-                className="group bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold px-8 py-4 rounded-lg shadow-xl hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                className="group bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-full shadow-xl hover:shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 transform hover:scale-105 cursor-pointer"
               >
                 View My Work
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -298,7 +298,7 @@ const Hero = () => {
                 download="Daniel_Kemboi_CV.docx"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group inline-flex items-center px-8 py-4 border-2 border-slate-500 hover:border-blue-400 rounded-lg text-sm font-semibold text-slate-300 hover:text-blue-300 hover:bg-blue-600/10 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10"
+                className="group inline-flex items-center px-8 py-4 border-2 border-orange-500 rounded-full text-sm font-semibold text-orange-400 hover:bg-orange-500 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/25"
               >
                 Download CV
                 <Download className="ml-2 h-5 w-5 transition-transform group-hover:translate-y-0.5" />
@@ -326,7 +326,7 @@ const Hero = () => {
                   rel={social.label !== "Email" ? "noopener noreferrer" : undefined}
                   whileHover={{ scale: 1.2, y: -2 }}
                   whileTap={{ scale: 0.9 }}
-                  className="text-gray-400 hover:text-blue-400 transition-all duration-300 p-2 rounded-lg hover:bg-blue-500/10 hover:shadow-lg hover:shadow-blue-500/10"
+                  className="text-gray-400 hover:text-orange-400 transition-all duration-300 p-2 rounded-full hover:bg-orange-500/10 hover:shadow-lg hover:shadow-orange-500/20"
                   aria-label={social.label}
                   title={social.label}
                 >
@@ -348,13 +348,13 @@ const Hero = () => {
               transition={{ type: "spring", stiffness: 300 }}
               className="relative group"
             >
-              {/* Animated background rings */}
-              <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-blue-500/20 via-slate-600/10 to-cyan-500/20 blur-2xl opacity-40 animate-pulse group-hover:opacity-60 transition-opacity duration-500"></div>
-              <div className="absolute -inset-2 rounded-full bg-gradient-to-tr from-blue-400/30 to-slate-600/30 blur-xl opacity-30 animate-spin"></div>
+              {/* Animated background rings - More masculine colors */}
+              <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-orange-500/20 via-gray-600/10 to-red-600/15 blur-2xl opacity-40 animate-pulse group-hover:opacity-60 transition-opacity duration-500"></div>
+              <div className="absolute -inset-2 rounded-full bg-gradient-to-tr from-orange-400/20 to-gray-600/20 blur-xl opacity-30 animate-spin"></div>
               
               {/* Main image container */}
-              <div className="relative bg-gradient-to-br from-slate-800 to-gray-900 rounded-full h-72 w-72 md:h-96 md:w-96 overflow-hidden border-4 border-slate-600 group-hover:border-blue-400/50 shadow-2xl shadow-slate-900/50 group-hover:shadow-blue-500/20 transition-all duration-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-slate-500/5"></div>
+              <div className="relative bg-gradient-to-br from-gray-800 to-slate-900 rounded-full h-72 w-72 md:h-96 md:w-96 overflow-hidden border-4 border-gray-600 group-hover:border-orange-400/50 shadow-2xl shadow-gray-900/50 group-hover:shadow-orange-500/20 transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-gray-500/5"></div>
                 <div className="h-full w-full flex items-center justify-center relative z-10">
                   <img
                     src="/profile-picture.png"
@@ -364,19 +364,19 @@ const Hero = () => {
                 </div>
                 
                 {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-blue-500/5 rounded-full"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-orange-500/8 rounded-full"></div>
               </div>
               
-              {/* Floating elements */}
+              {/* Floating elements - More masculine colors */}
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full blur-sm opacity-60"
+                className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-orange-400 to-gray-500 rounded-full blur-sm opacity-60"
               ></motion.div>
               <motion.div
                 animate={{ rotate: -360 }}
                 transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-slate-400 to-blue-500 rounded-full blur-sm opacity-40"
+                className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-gray-400 to-orange-500 rounded-full blur-sm opacity-40"
               ></motion.div>
             </motion.div>
           </motion.div>
@@ -395,10 +395,10 @@ const Hero = () => {
             className="flex flex-col items-center space-y-2 cursor-pointer group"
             onClick={scrollToProjects}
           >
-            <span className="text-gray-400 text-sm font-medium group-hover:text-blue-400 transition-colors">
+            <span className="text-gray-400 text-sm font-medium group-hover:text-orange-400 transition-colors">
               Scroll to explore
             </span>
-            <ChevronDown className="text-gray-400 group-hover:text-blue-400 transition-colors" size={28} />
+            <ChevronDown className="text-gray-400 group-hover:text-orange-400 transition-colors" size={28} />
           </motion.div>
         </motion.div>
       </div>
