@@ -67,7 +67,8 @@ const freelanceProjects = [
     description: "Created a modern and responsive website for Ace of Fades Barber Shop, enabling online bookings and showcasing services.",
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "Laravel"],
     image: "/Ace_of_fade.png",
-    liveUrl: "https://ace-of-fades.twinfusion.co.ke/",
+    // liveUrl: "https://ace-of-fades.twinfusion.co.ke/",
+    liveUrl: "https://ace-fades.netlify.app/",
   }
 ];
 
