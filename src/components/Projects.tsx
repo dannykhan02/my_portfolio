@@ -37,6 +37,15 @@ const featuredProjects = [
     image: "/food_delivery_system.png",
     github: "https://github.com/JBcollo1/flutter-food-fusion",
     liveUrl: "https://castino.netlify.app",
+  },
+  {
+    title: "Magnet Custom System",
+    description: "A modern platform for creating and managing custom magnet orders — featuring personalized design uploads, order tracking, user profiles, and delivery coordination across multiple cities.",
+    technologies: ["Javascript","Typescript",  "Python", "Flask", "SQLAlchemy", "Mpesa", "Tailwind CSS"],
+    metrics: " 100+ daily orders",
+    image: "/magnet.png",
+    github: "https://github.com/JBcollo1/magnet",
+    liveUrl: "https://magnet12.netlify.app/",
   }
 ];
 
