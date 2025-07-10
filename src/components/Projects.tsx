@@ -356,7 +356,6 @@ const Projects = () => {
           <h3 className="text-xl font-bold text-white">{project.title}</h3>
           <span className="text-burntorange text-sm font-medium">{project.progress}%</span>
         </div>
-
         <div className="w-full bg-deepgray rounded-full h-2 mb-4">
           <motion.div
             className="bg-burntorange h-2 rounded-full"
