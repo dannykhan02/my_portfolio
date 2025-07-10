@@ -29,7 +29,63 @@ const featuredProjects = [
       "Used flask components deployed on cPanel for administrative functions"
     ]
   },
-  // Other projects...
+  {
+    title: "Ticketing System",
+    role: "Technical Lead",
+    date: "November 2024 - Present",
+    description: "End-to-end ticket management solution with role-based access, automated notifications, and analytics dashboard.",
+    longDescription: "This Enterprise Ticketing Application revolutionizes how businesses handle internal support requests. As Technical Lead, I built a highly scalable system that processes over 800 tickets daily with exceptional reliability while providing powerful business intelligence through comprehensive reporting.",
+    technologies: ["TypeScript", "React", "Redux", "Flask", "SQLAlchemy", "PostgreSQL", "Tailwind CSS", "Mpesa API", "Paystack API"],
+    metrics: "1,200+ active users, 40% reduction in resolution time, Still under production - Enhanced features in development",
+    image: "/ticketing_system.png",
+    github: "https://github.com/JBcollo2/pulse",
+    liveUrl: "https://pulse-ticket-verse.netlify.app",
+    challenges: "Creating a system capable of handling high ticket volume with real-time updates while maintaining comprehensive historical data for business intelligence.",
+    solutions: "Engineered a custom dashboard with real-time WebSocket notifications and implemented efficient database indexing that reduced ticket resolution time by 40%.",
+    highlights: [
+      "Achieved 99.99% uptime even during peak usage periods",
+      "Implemented real-time notifications via WebSockets",
+      "Created comprehensive reporting for business intelligence"
+    ]
+  },
+  {
+    title: "Food Delivery System",
+    role: "Team Lead",
+    date: "October 2024 - Present",
+    description: "A complete platform for food ordering and delivery, featuring restaurant management, user profiles, and order tracking.",
+    longDescription: "This comprehensive Food Delivery Management System handles everything from customer ordering to delivery tracking. As Team Lead, I designed a microservice architecture capable of processing 1,000+ concurrent orders while maintaining system performance and reliability.",
+    technologies: ["React", "Node.js", "Python", "Flask", "SQLAlchemy", "Mpesa Api", "Tailwind CSS", "Paystack API"],
+    metrics: "Still under production - Enhanced features in development",
+    image: "/food_delivery_system.png",
+    github: "https://github.com/JBcollo1/flutter-food-fusion",
+    liveUrl: "https://castino.netlify.app",
+    challenges: "Coordinating multiple services including real-time GPS tracking, order management, payment processing, and vendor inventory systems while ensuring seamless user experience.",
+    solutions: "Designed a robust microservice architecture with efficient database optimization that enabled smooth handling of 1,000+ concurrent orders with minimal latency.",
+    highlights: [
+      "Implementing real-time GPS tracking with 99.8% accuracy",
+      "Developing vendor portal and inventory management using PHP with cPanel deployment",
+      "Creating secure payment processing supporting 5+ payment methods"
+    ]
+  },
+  {
+    title: "Magnet Custom System",
+    role: "Solo Developer",
+    date: "December 2024 - Present",
+    description: "A modern platform for creating and managing custom magnet orders — featuring personalized design uploads, order tracking, user profiles, and delivery coordination across multiple cities.",
+    longDescription: "This project involved developing a complete custom magnet ordering system. As the sole developer, I focused on user experience optimization and order management, creating a robust platform that significantly streamlined the custom magnet creation process for users while maintaining complete order integrity.",
+    technologies: ["Javascript", "Typescript", "Python", "Flask", "SQLAlchemy", "Mpesa", "Tailwind CSS"],
+    metrics: "100+ daily orders",
+    image: "/magnet.png",
+    github: "https://github.com/JBcollo1/magnet",
+    liveUrl: "https://magnet12.netlify.app/",
+    challenges: "Creating a user-friendly interface for custom design uploads while ensuring efficient order processing and delivery coordination across multiple cities.",
+    solutions: "Implemented advanced file upload handling and created an intuitive design interface that reduced order completion time by 60% while maintaining high-quality output.",
+    highlights: [
+      "Reduced order processing time by 60% through efficient workflow design",
+      "Successfully integrated multi-city delivery coordination system",
+      "Created comprehensive order tracking and user profile management"
+    ]
+  }
 ];
 
 const freelanceProjects = [
@@ -50,7 +106,40 @@ const freelanceProjects = [
       "Created fully responsive design for all screen sizes"
     ]
   },
-  // Other freelance projects...
+  {
+    title: "LumeLink Technologies",
+    role: "Lead Developer",
+    date: "September 2024 - Present",
+    description: "Crafted a professional website for LumeLink Technologies, highlighting their tech solutions and expertise.",
+    longDescription: "The LumeLink Portfolio Platform is a cutting-edge solution for professionals to showcase their work with location-based context. As Lead Developer, I architected a responsive system featuring interactive map integration, optimized image loading, and seamless dark/light mode transitions for an exceptional user experience.",
+    technologies: ["React", "Tailwind CSS", "Vite"],
+    image: "/lumelink.png",
+    liveUrl: "https://lumelink.netlify.app/",
+    challenges: "Creating a highly performant application with complex map integrations while maintaining exceptional page load speeds across all devices.",
+    solutions: "Implemented dynamic code splitting, lazy loading of components, and optimized image processing that resulted in a remarkable 97/100 Google PageSpeed score.",
+    highlights: [
+      "Delivered 10 days ahead of schedule with zero critical bugs",
+      "Created reusable component library reducing future development time by 40%",
+      "Implemented advanced animations using Framer Motion for engaging user experience"
+    ]
+  },
+  {
+    title: "Ace of Fades Barber Shop",
+    role: "Full-stack Developer",
+    date: "July 2024",
+    description: "Created a modern and responsive website for Ace of Fades Barber Shop, enabling online bookings and showcasing services.",
+    longDescription: "The Ace of Fades project involved creating a modern, responsive website for a barber shop that enables online bookings and effectively showcases their services. The platform features appointment scheduling, service listings, and a gallery of previous work.",
+    technologies: ["HTML", "CSS", "JavaScript", "PHP", "Laravel"],
+    image: "/Ace_of_fade.png",
+    liveUrl: "https://aceoffades.africa/",
+    challenges: "Creating a booking system that integrates with the barber shop's scheduling while maintaining an attractive, user-friendly interface.",
+    solutions: "Developed a custom booking system with PHP and Laravel backend that seamlessly integrates with the shop's workflow, reducing booking conflicts by 80%.",
+    highlights: [
+      "Implemented online booking system reducing phone bookings by 70%",
+      "Created service showcase with pricing and duration information",
+      "Integrated gallery featuring before/after photos of client work"
+    ]
+  }
 ];
 
 const upcomingProjects = [
@@ -74,7 +163,26 @@ const upcomingProjects = [
       "Frontend designed with React + Tailwind; backend API in FastAPI"
     ]
   },
-  // Other upcoming projects...
+  {
+    title: "Food Delivery System",
+    role: "Team Lead",
+    date: "October 2024 - Present",
+    description: "A complete platform for food ordering and delivery, featuring restaurant management, user profiles, and order tracking with enhanced features.",
+    longDescription: "This comprehensive Food Delivery Management System handles everything from customer ordering to delivery tracking. As Team Lead, I designed a microservice architecture capable of processing 1,000+ concurrent orders while maintaining system performance and reliability.",
+    technologies: ["React", "Node.js", "Python", "Flask", "SQLAlchemy", "Mpesa API", "Tailwind CSS", "Paystack API"],
+    status: "In Development",
+    progress: 40,
+    expectedLaunch: "Q1 2025",
+    features: ["Real-time order tracking", "Restaurant dashboard", "Payment integration", "Delivery optimization"],
+    image: "/food_delivery_system.png",
+    challenges: "Coordinating multiple services including real-time GPS tracking, order management, payment processing, and vendor inventory systems while ensuring seamless user experience.",
+    solutions: "Designed a robust microservice architecture with efficient database optimization that enabled smooth handling of 1,000+ concurrent orders with minimal latency.",
+    highlights: [
+      "Implementing real-time GPS tracking with 99.8% accuracy",
+      "Developing vendor portal and inventory management using PHP with cPanel deployment",
+      "Creating secure payment processing supporting 5+ payment methods"
+    ]
+  },
 ];
 
 const Projects = () => {
