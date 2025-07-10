@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Clock, Code, Zap } from "lucide-react";
 
 // Define your color variables here or import them from your design system
 const styles = {
@@ -41,7 +41,7 @@ const featuredProjects = [
   {
     title: "Magnet Custom System",
     description: "A modern platform for creating and managing custom magnet orders — featuring personalized design uploads, order tracking, user profiles, and delivery coordination across multiple cities.",
-    technologies: ["Javascript","Typescript",  "Python", "Flask", "SQLAlchemy", "Mpesa", "Tailwind CSS"],
+    technologies: ["Javascript","Typescript","Python", "Flask", "SQLAlchemy", "Mpesa", "Tailwind CSS"],
     metrics: " 100+ daily orders",
     image: "/magnet.png",
     github: "https://github.com/JBcollo1/magnet",
@@ -77,15 +77,49 @@ const freelanceProjects = [
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "Laravel"],
     image: "/Ace_of_fade.png",
     liveUrl: "https://aceoffades.africa/",
-    // liveUrl: "https://ace-fades.netlify.app/",
   }
+];
+
+const upcomingProjects = [
+  {
+    title: "AI-Powered Analytics Dashboard",
+    description: "A comprehensive business intelligence platform with machine learning insights, predictive analytics, and real-time data visualization.",
+    technologies: ["React", "TypeScript", "Python", "TensorFlow", "D3.js", "WebSocket", "FastAPI"],
+    status: "In Development",
+    progress: 75,
+    expectedLaunch: "Q2 2025",
+    features: ["Real-time data processing", "ML-powered forecasting", "Interactive visualizations", "Custom report generation"],
+    image: "/ai-dashboard-preview.png",
+  },
+  {
+    title: "Blockchain Voting System",
+    description: "A secure, transparent voting platform leveraging blockchain technology for elections and organizational decision-making.",
+    technologies: ["Solidity", "React", "Web3.js", "Ethereum", "IPFS", "Node.js"],
+    status: "Planning Phase",
+    progress: 25,
+    expectedLaunch: "Q3 2025",
+    features: ["Immutable vote records", "Anonymous voting", "Real-time results", "Multi-signature validation"],
+    image: "/blockchain-voting-preview.png",
+  },
+  {
+    title: "IoT Smart Home Hub",
+    description: "A centralized control system for smart home devices with AI-driven automation, energy optimization, and security monitoring.",
+    technologies: ["React Native", "Python", "MQTT", "TensorFlow Lite", "Firebase", "Raspberry Pi"],
+    status: "Research Phase",
+    progress: 15,
+    expectedLaunch: "Q4 2025",
+    features: ["Device automation", "Energy monitoring", "Security alerts", "Voice control integration"],
+    image: "/smart-home-preview.png",
+  },
 ];
 
 const Projects = () => {
   const refFeatured = useRef(null);
   const refFreelance = useRef(null);
+  const refUpcoming = useRef(null);
   const inViewFeatured = useInView(refFeatured, { once: true, amount: 0.1 });
   const inViewFreelance = useInView(refFreelance, { once: true, amount: 0.1 });
+  const inViewUpcoming = useInView(refUpcoming, { once: true, amount: 0.1 });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -183,6 +217,88 @@ const Projects = () => {
     </motion.div>
   );
 
+  const UpcomingProjectCard = ({ project }) => (
+    <motion.div
+      variants={itemVariants}
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.98 }}
+      className="relative bg-charcoal rounded-2xl overflow-hidden transition-all duration-300 shadow-md hover:shadow-lg border border-transparent hover:border-burntorange group cursor-pointer"
+    >
+      <div className="relative h-48 overflow-hidden bg-deepgray group">
+        <div className="w-full h-full bg-gradient-to-br from-burntorange/20 to-deepgray flex items-center justify-center">
+          <div className="text-center">
+            <Clock size={48} className="text-burntorange mx-auto mb-2" />
+            <p className="text-white text-lg font-semibold">{project.title}</p>
+          </div>
+        </div>
+        <div className="absolute top-4 right-4">
+          <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+            project.status === 'In Development' ? 'bg-yellow-500/20 text-yellow-400' :
+            project.status === 'Planning Phase' ? 'bg-blue-500/20 text-blue-400' :
+            'bg-purple-500/20 text-purple-400'
+          }`}>
+            {project.status}
+          </span>
+        </div>
+      </div>
+      <div className="p-6">
+        <div className="flex items-center justify-between mb-2">
+          <h3 className="text-xl font-bold">{project.title}</h3>
+          <span className="text-burntorange text-sm font-medium">{project.progress}%</span>
+        </div>
+        
+        {/* Progress Bar */}
+        <div className="w-full bg-deepgray rounded-full h-2 mb-4">
+          <motion.div
+            className="bg-burntorange h-2 rounded-full"
+            initial={{ width: 0 }}
+            whileInView={{ width: `${project.progress}%` }}
+            transition={{ duration: 1.5, delay: 0.5 }}
+          />
+        </div>
+
+        <p className="text-gray-300 text-sm mb-4">{project.description}</p>
+
+        <div className="mb-4">
+          <motion.div
+            className="flex flex-wrap gap-2 mb-3"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ staggerChildren: 0.05 }}
+          >
+            {project.technologies.map((tech, techIndex) => (
+              <motion.span
+                key={techIndex}
+                whileHover={{ scale: 1.1 }}
+                className="text-xs bg-deepgray px-2 py-1 rounded text-gray-300 border border-slate-600"
+              >
+                {tech}
+              </motion.span>
+            ))}
+          </motion.div>
+        </div>
+
+        {/* Key Features */}
+        <div className="mb-4">
+          <h4 className="text-sm font-medium text-burntorange mb-2">Key Features:</h4>
+          <ul className="text-xs text-gray-300 space-y-1">
+            {project.features.map((feature, index) => (
+              <li key={index} className="flex items-center">
+                <Zap size={12} className="text-burntorange mr-2" />
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="flex justify-between items-center pt-4 border-t border-deepgray">
+          <span className="text-gray-400 text-sm">Expected Launch:</span>
+          <span className="text-burntorange text-sm font-medium">{project.expectedLaunch}</span>
+        </div>
+      </div>
+    </motion.div>
+  );
+
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto px-4 md:px-6">
@@ -213,7 +329,7 @@ const Projects = () => {
           ))}
         </motion.div>
 
-        {/* New Freelance Projects Section */}
+        {/* Freelance Projects Section */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -233,10 +349,37 @@ const Projects = () => {
           initial="hidden"
           animate={inViewFreelance ? "visible" : "hidden"}
           variants={containerVariants}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20"
         >
           {freelanceProjects.map((project, index) => (
             <ProjectCard key={`freelance-${index}`} project={project} />
+          ))}
+        </motion.div>
+
+        {/* Upcoming Projects Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <span className="text-burntorange uppercase tracking-wider text-sm font-medium">What's Next</span>
+          <h2 className="text-3xl md:text-4xl font-bold mt-2">Upcoming Projects</h2>
+          <p className="mt-4 text-gray-300 max-w-2xl mx-auto">
+            Innovative solutions currently in development, pushing the boundaries of technology.
+          </p>
+        </motion.div>
+
+        <motion.div
+          ref={refUpcoming}
+          initial="hidden"
+          animate={inViewUpcoming ? "visible" : "hidden"}
+          variants={containerVariants}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {upcomingProjects.map((project, index) => (
+            <UpcomingProjectCard key={`upcoming-${index}`} project={project} />
           ))}
         </motion.div>
       </div>
