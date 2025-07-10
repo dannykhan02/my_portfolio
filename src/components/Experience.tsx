@@ -4,9 +4,25 @@ import { useRef } from "react";
 
 const experiences = [
   {
-    title: "Senior Full Stack Developer",
+    title: "Independent Contractor - Programmer",
+    company: "Twinfusion Limited",
+    period: "May 2025 - July 2025",
+    description: [
+      "Engaged as independent contractor for comprehensive programming services and web development",
+      "Lead qualifying, sharing and closing SaifyPOS with internal university project initiatives",
+      "Manage Jamea university project implementations with change request handling (1k KSH per request)",
+      "Develop and maintain API integrations and custom applications including PerfexCRM solutions",
+      "Provide full-stack development services for websites, mobile apps, and custom applications",
+      "Deliver comprehensive IT support including client websites, email systems, and technical troubleshooting",
+      "Conduct SEO optimization and website performance improvements",
+      "Maintain L1 support with 24-hour response time commitment for client issue resolution",
+      "Technologies: Web Development, Mobile Apps, API Integration, CRM Systems, SEO"
+    ]
+  },
+  {
+    title: "Full Stack Developer",
     company: "Freelance",
-    period: "Jan 2021 - Present",
+    period: "Feb 2024 - Present",
     description: [
       "Designed and developed full-stack web applications for 20+ clients across various industries",
       "Implemented responsive designs and performance optimizations, improving load times by an average of 45%",
@@ -15,36 +31,37 @@ const experiences = [
     ]
   },
   {
-    title: "Full Stack Developer",
-    company: "TechSolutions Inc.",
-    period: "Mar 2019 - Dec 2020",
+    title: "Software Engineering Intern",
+    company: "Koduor and Company Ltd",
+    period: "May 2024 - Aug 2024",
     description: [
-      "Led development of the company's flagship product, a SaaS platform serving 500+ businesses",
-      "Collaborated with product managers and designers to implement new features and improvements",
-      "Mentored junior developers and conducted code reviews",
-      "Technologies: JavaScript, PHP, MySQL, Laravel, Vue.js"
+      "Built components for a freelancer mobile platform used by over 5,000 users",
+      "Contributed to a departmental ERP used by internal teams for resource planning",
+      "Implemented core features of an internal ticketing tool with 99.5% uptime",
+      "Technologies: React Native, Flask, PostgreSQL"
     ]
   },
   {
-    title: "Web Developer",
-    company: "Digital Creative Agency",
-    period: "Jun 2017 - Feb 2019",
+    title: "Software Engineering Intern",
+    company: "CyberTap",
+    period: "Jan 2024 - Mar 2024",
     description: [
-      "Developed websites and web applications for clients in the finance, healthcare, and retail sectors",
-      "Optimized existing codebases for performance and maintainability",
-      "Participated in client meetings to gather requirements and present solutions",
-      "Technologies: HTML5, CSS3, JavaScript, jQuery, WordPress"
+      "Built a secure auth system that reduced security incidents by 95%",
+      "Developed APIs serving 50,000+ daily requests with 99.9% uptime",
+      "Wrote automated tests increasing backend coverage from 60% to 90%",
+      "Technologies: Python, Flask, PostgreSQL, Pytest"
     ]
-  }
+  },
+ 
 ];
 
 const certifications = [
-  { title: "Software Engineering", issuer: "Moringa School", date: "2023" },
-  { title: "TypeScript Fundamentals", issuer: "FreeCodeCamp", date: "2021" },
+  { title: "Software Engineering", issuer: "Moringa School", date: "2024" },
+  { title: "TypeScript Fundamentals", issuer: "FreeCodeCamp", date: "2023" },
   { title: "PHP & cPanel Deployment", issuer: "Coursera", date: "2024" },
-  { title: "Advanced React Patterns", issuer: "FreeCodeCamp", date: "2022" },
-  { title: "AWS Cloud Practitioner", issuer: "Amazon Web Services", date: "2022" },
-  { title: "Agile Project Management", issuer: "Scrum.org", date: "2022" }
+  { title: "Backend Development and Api's", issuer: "FreeCodeCamp", date: "2024" },
+  { title: "Certified full stack Developer Curriculum", issuer: "FreeCodeCamp", date: "2025" },
+  { title: "Relational Database", issuer: "FreeCodeCamp", date: "2024" },
 ];
 
 const softSkills = [
