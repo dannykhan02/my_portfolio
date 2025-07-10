@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink, Github, Clock, Code, Zap } from "lucide-react";
+import { ExternalLink, Github, Code, Zap } from "lucide-react";
 
 // Define your color variables here or import them from your design system
 const styles = {
@@ -209,11 +209,13 @@ const Projects = () => {
       className="relative bg-charcoal rounded-2xl overflow-hidden transition-all duration-300 shadow-md hover:shadow-lg border border-transparent hover:border-burntorange group cursor-pointer"
     >
       <div className="relative h-48 overflow-hidden bg-deepgray group">
-        <div className="w-full h-full bg-gradient-to-br from-burntorange/20 to-deepgray flex items-center justify-center">
-          <div className="text-center">
-            <Clock size={48} className="text-burntorange mx-auto mb-2" />
-            <p className="text-white text-lg font-semibold">{project.title}</p>
-          </div>
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+          <p className="text-white text-lg font-semibold">{project.title}</p>
         </div>
         <div className="absolute top-4 right-4">
           <span className={`px-3 py-1 rounded-full text-xs font-medium ${
