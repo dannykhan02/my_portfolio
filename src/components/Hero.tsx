@@ -163,7 +163,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, Github, Linkedin, Mail, ChevronDown } from "lucide-react";
 import { FaReact, FaPython, FaPhp } from "react-icons/fa";
-import { SiTypescript, SiFlask, SiExpress } from "react-icons/si";
+import { SiTypescript, SiFlask, SiPython } from "react-icons/si";
 
 const Hero = () => {
   const techStack = [
@@ -172,7 +172,7 @@ const Hero = () => {
     { name: "Python", icon: FaPython, category: "Backend" },
     { name: "PHP", icon: FaPhp, category: "Backend" },
     { name: "Flask", icon: SiFlask, category: "Backend" },
-    { name: "Express.js", icon: SiExpress, category: "Backend" },
+    { name: "FastAPI", icon: SiPython, category: "Backend" },
   ];
 
   const scrollToProjects = () => {
@@ -248,8 +248,7 @@ const Hero = () => {
               className="space-y-6"
             >
               <p className="text-gray-400 text-lg leading-relaxed max-w-2xl">
-                I am a results-driven freelancer with expertise in modern web technologies, 
-                creating robust applications that deliver exceptional user experiences.
+             I am a results-driven developer with a strong freelance background, specializing in modern web technologies and building robust applications that deliver exceptional user experiences
               </p>
 
               {/* Enhanced Tech Stack */}
@@ -294,7 +293,7 @@ const Hero = () => {
               </Button>
               
               <motion.a
-                href="/daniel_kemboi_cv.docx"
+                href="/Daniel_kemboi_cv.docx"
                 download="Daniel_Kemboi_CV.docx"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
